@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#04060f">
+<meta name="mobile-web-app-capable" content="yes">
+<title>Nova Vanguard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="game"></canvas>
+
+<div id="ui">
+  <section id="menu" class="screen">
+    <h1>NOVA<br><span>VANGUARD</span></h1>
+    <p class="tag">Defenda Aurora. Evolua sua nave. Vire lenda.</p>
+    <div class="stats"><span>💎 <b id="mCredits">0</b></span><span>🏆 <b id="mBest">0</b></span></div>
+    <button id="btnPlay" class="big">▶ JOGAR</button>
+    <button id="btnHangar">🛠 HANGAR</button>
+    <button id="btnMissions">🎯 MISSÕES</button>
+    <button id="btnSound">🔊 SOM: LIGADO</button>
+    <div class="foot">Arraste para mover · Tiro automático · Toque na bomba para a Nova</div>
+  </section>
+
+  <section id="story" class="screen hidden">
+    <div class="storybox">
+      <div class="who">TRANSMISSÃO DE EMERGÊNCIA</div>
+      <p id="storyText"></p>
+      <div class="tap">toque para continuar</div>
+    </div>
+  </section>
+
+  <section id="hangar" class="screen hidden">
+    <h2>HANGAR</h2>
+    <div class="stats"><span>💎 <b id="hCredits">0</b></span></div>
+    <div id="hangarList" class="list"></div>
+    <button id="hangarBack">← VOLTAR</button>
+  </section>
+
+  <section id="missions" class="screen hidden">
+    <h2>MISSÕES</h2>
+    <div class="stats"><span>💎 <b id="msCredits">0</b></span></div>
+    <div id="missionList" class="list"></div>
+    <button id="missionsBack">← VOLTAR</button>
+  </section>
+
+  <section id="pause" class="screen hidden">
+    <h2>PAUSADO</h2>
+    <button id="btnResume" class="big">▶ CONTINUAR</button>
+    <button id="btnQuit">SAIR PARA O MENU</button>
+  </section>
+
+  <section id="over" class="screen hidden">
+    <h2 id="overTitle">FIM DE JOGO</h2>
+    <p id="overQuote" class="quote"></p>
+    <div id="overStats" class="list"></div>
+    <button id="btnAgain" class="big">↻ JOGAR DE NOVO</button>
+    <button id="btnOverHangar">🛠 HANGAR</button>
+    <button id="btnOverMenu">MENU</button>
+  </section>
+</div>
+
+<div id="toasts"></div>
+
+<script src="js/audio.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
